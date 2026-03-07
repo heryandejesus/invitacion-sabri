@@ -1,6 +1,6 @@
 // --- Lógica de la Cuenta Regresiva ---
-// Establecemos la fecha de la fiesta: 14 de Marzo de 2026 a las 20:00 hs
-const countDownDate = new Date("Mar 14, 2026 20:00:00").getTime();
+// Establecemos la fecha de la fiesta: 14 de Marzo de 2026 a las 19:00 hs
+const countDownDate = new Date("Mar 14, 2026 19:00:00").getTime();
 
 const x = setInterval(function() {
     const now = new Date().getTime();
