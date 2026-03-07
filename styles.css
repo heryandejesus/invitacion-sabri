@@ -1,0 +1,155 @@
+/* --- Reset y Estilos Globales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', 'Poppins', Arial, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #00C9A7, #884DFF);
+    background-size: 400% 400%;
+    animation: moveGradient 15s ease infinite;
+}
+
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- Tarjeta Glassmorphism --- */
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 420px;
+    animation: cardIn 1s ease-out;
+    color: white;
+    z-index: 10;
+}
+
+@keyframes cardIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Imagen de Perfil --- */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+p {
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.details {
+    margin-bottom: 25px;
+}
+
+/* --- Cuenta Regresiva --- */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.countdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown span {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.countdown small {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Botones --- */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Para que no se aplasten en móviles pequeños */
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 90px;
+}
+
+.btn-yes { background-color: #23d5ab; color: white; }
+.btn-maybe { background-color: #f39c12; color: white; }
+.btn-no { background-color: rgba(255, 255, 255, 0.8); color: #747d8c; }
+
+button:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn-no:hover { background-color: white; }
+
+/* --- Mensajes de Resultado y GIFs --- */
+.result-message {
+    display: none;
+    margin-top: 15px;
+    animation: fadeInMessage 0.6s ease;
+}
+
+.cat-gif {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+@keyframes fadeInMessage {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
